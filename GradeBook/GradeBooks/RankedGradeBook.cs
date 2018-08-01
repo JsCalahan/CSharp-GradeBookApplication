@@ -17,7 +17,7 @@ namespace GradeBook.GradeBooks
         {
             if(Students.Count < 5)
             {
-                throw new InvalidOperationException();
+                throw new InvalidOperationException("Ranked grading requires at least 5 students.");
             }
 
             var threshold = (int)Math.Ceiling(Students.Count * 0.20);
@@ -29,7 +29,6 @@ namespace GradeBook.GradeBooks
             if (grades[threshold - 1] <= averageGrade)
             {
                 return 'A';
-
             }
             else if (grades[(threshold * 2) - 1] <= averageGrade)
             {
@@ -44,7 +43,6 @@ namespace GradeBook.GradeBooks
                 return 'D';
             }
             else return 'F';
-                //return base.GetLetterGrade(averageGrade);
         }
     }
 }
