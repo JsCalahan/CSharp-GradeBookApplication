@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GradeBooks.Enums;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
