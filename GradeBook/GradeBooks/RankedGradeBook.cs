@@ -42,13 +42,7 @@ namespace GradeBook.GradeBooks
             {
                 return 'D';
             }
-            else if (grades[(threshold * 5)] - 1 <= averageGrade)
-            {
-                return 'F';
-            }
-
-
-
+            return 'F';
         }
     }
 }
