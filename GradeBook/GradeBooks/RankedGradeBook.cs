@@ -22,9 +22,6 @@ namespace GradeBook.GradeBooks
 
             var threshold = (int)Math.Ceiling(Students.Count * 0.20);
             var grades = Students.OrderByDescending(e => e.AverageGrade).Select(e => e.AverageGrade).ToList();
-            //creates a list (grades) to hold the grades of the class. Sorts the Students by the AverageGrade, puts them in a list and then
-            //selects those grades and sets grades equal to the list.
-
 
             if (grades[threshold - 1] <= averageGrade)
             {
